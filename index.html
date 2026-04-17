@@ -29,6 +29,7 @@ color:#fff;
 .hero h1{font-size:42px;}
 .hero p{margin-top:10px;}
 
+/* BUTTON */
 .btn{
 margin-top:20px;
 padding:14px 30px;
@@ -37,30 +38,43 @@ color:#ff4d88;
 border-radius:30px;
 text-decoration:none;
 font-weight:600;
+border:none;
+cursor:pointer;
 }
 
 /* SECTION */
 .section{
-padding:60px 20px;
+padding:70px 20px;
 text-align:center;
 }
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 gap:20px;
-max-width:1000px;
+max-width:1100px;
 margin:auto;
 }
 
+/* CARD */
 .card{
 background:rgba(255,255,255,0.3);
-backdrop-filter:blur(10px);
+backdrop-filter:blur(12px);
 padding:20px;
 border-radius:15px;
+transition:0.3s;
 }
 
-/* ORDER FORM */
+.card:hover{transform:scale(1.05);}
+
+/* IMAGE */
+.card img{
+width:100%;
+border-radius:10px;
+margin-bottom:10px;
+}
+
+/* FORM */
 .form-box{
 max-width:500px;
 margin:auto;
@@ -75,6 +89,61 @@ padding:12px;
 margin:10px 0;
 border:none;
 border-radius:10px;
+}
+
+/* TESTIMONIAL */
+.testimonial{
+background:#fff;
+padding:20px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* FAQ */
+.faq{
+max-width:700px;
+margin:auto;
+text-align:left;
+}
+
+.faq p{
+background:#fff;
+padding:15px;
+border-radius:10px;
+margin:10px 0;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+color:#fff;
+padding:40px 20px;
+}
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.footer h3{color:#ff85a2;}
+
+.footer p, .footer a{
+color:#ccc;
+font-size:14px;
+text-decoration:none;
+display:block;
+margin:5px 0;
+}
+
+.footer a:hover{color:#fff;}
+
+.copyright{
+text-align:center;
+margin-top:20px;
+color:#aaa;
 }
 
 /* MODAL */
@@ -96,7 +165,6 @@ padding:30px;
 border-radius:15px;
 text-align:center;
 }
-
 </style>
 </head>
 
@@ -114,20 +182,53 @@ text-align:center;
 <h2>Our Hampers</h2>
 
 <div class="grid">
-<div class="card">Birthday Hamper – ₹999</div>
-<div class="card">Love Hamper – ₹1299</div>
-<div class="card">Custom Gift Box – ₹799</div>
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<p>Birthday Hamper – ₹999</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<p>Love Hamper – ₹1299</p>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/300">
+<p>Custom Gift Box – ₹799</p>
+</div>
 </div>
 </section>
 
-<!-- ORDER SYSTEM -->
+<!-- WHY -->
+<section class="section">
+<h2>Why Choose Us</h2>
+
+<div class="grid">
+<div class="card">✔ Handmade Premium Quality</div>
+<div class="card">✔ Same Day Delivery</div>
+<div class="card">✔ Affordable Pricing</div>
+<div class="card">✔ Personalized Gifts</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2>Customer Reviews 💬</h2>
+
+<div class="grid">
+<div class="testimonial">“Amazing quality and fast delivery!” ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">“Best gift I ever ordered 😍” ⭐⭐⭐⭐⭐</div>
+<div class="testimonial">“Packaging was premium, loved it!” ⭐⭐⭐⭐⭐</div>
+</div>
+</section>
+
+<!-- ORDER -->
 <section id="order" class="section">
 <h2>Place Your Order 🛒</h2>
 
 <div class="form-box">
 
 <input type="text" id="name" placeholder="Your Name" required>
-
 <input type="tel" id="phone" placeholder="Phone Number" required>
 
 <select id="product">
@@ -137,7 +238,6 @@ text-align:center;
 </select>
 
 <input type="text" id="custom" placeholder="Customization (Name/Message)">
-
 <input type="date" id="date">
 
 <button onclick="placeOrder()" class="btn" style="width:100%;">
@@ -147,13 +247,53 @@ Confirm Order
 </div>
 </section>
 
-<!-- CTA -->
+<!-- FAQ -->
 <section class="section">
-<h2>Make Someone Smile Today 💝</h2>
-<p>Premium hampers delivered with care</p>
+<h2>FAQs</h2>
+
+<div class="faq">
+<p><b>Do you provide same day delivery?</b><br>Yes, available in Indore.</p>
+<p><b>Can I customize my hamper?</b><br>Yes, fully customizable.</p>
+<p><b>How to order?</b><br>Fill form and we will contact you.</p>
+</div>
 </section>
 
-<!-- SUCCESS MODAL -->
+<!-- FOOTER -->
+<footer>
+<div class="footer-container footer">
+
+<div>
+<h3>Taniya Cutecove</h3>
+<p>Custom hampers crafted with love for every occasion.</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>📞 +91 92012 34291</p>
+<p>📍 Indore, India</p>
+<p>⏰ Open 24 Hours</p>
+</div>
+
+<div>
+<h3>Follow Us</h3>
+<a href="#">Instagram: @taniya_cutecove</a>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<a href="#">Home</a>
+<a href="#order">Order</a>
+<a href="#">Privacy Policy</a>
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Taniya Cutecove
+</div>
+</footer>
+
+<!-- MODAL -->
 <div id="successModal">
 <div class="modal-content">
 <h2>🎉 Order Submitted!</h2>
@@ -164,45 +304,23 @@ Confirm Order
 </div>
 
 <script>
-
 function placeOrder(){
 
 let name = document.getElementById("name").value;
 let phone = document.getElementById("phone").value;
-let product = document.getElementById("product").value;
-let custom = document.getElementById("custom").value;
-let date = document.getElementById("date").value;
 
 if(!name || !phone){
-alert("Please fill required fields");
+alert("Fill required fields");
 return;
 }
 
-/* STORE ORDER LOCALLY (DEMO PURPOSE) */
-let order = {
-name, phone, product, custom, date
-};
-
-let orders = JSON.parse(localStorage.getItem("orders")) || [];
-orders.push(order);
-localStorage.setItem("orders", JSON.stringify(orders));
-
-/* SHOW SUCCESS */
 document.getElementById("successModal").style.display = "flex";
-
-/* RESET FORM */
-document.getElementById("name").value="";
-document.getElementById("phone").value="";
-document.getElementById("custom").value="";
-document.getElementById("date").value="";
-
 }
 
 function closeModal(){
 document.getElementById("successModal").style.display = "none";
 }
-
 </script>
 
 </body>
-</html>
+  </html>
